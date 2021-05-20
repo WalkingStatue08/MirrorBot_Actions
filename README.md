@@ -6,6 +6,7 @@ This is my template for running various aria mirrorbots with one common workflow
 
 You can use any of these scripts
 
+- https://github.com/breakdowns/slam-mirrorbot
 - https://github.com/lzzy12/python-aria-mirror-bot
 - https://github.com/magneto261290/magneto-python-aria
 - https://github.com/SVR666/LoaderX-Bot
@@ -32,10 +33,10 @@ As `token.pickle` is a binary file, I base64-encoded it before uploading it name
 After that, I had to add some info for the [workflow file](.github/workflows/main.yml) in Repository (Or Organizaion) Secrets. 
 
 1. Add your own GitHub Credentials as `GitHubMail` and `GitHubName`.
-2. Add your GitHub Personal Access Token as `GH_TOKEN` with most of the admin-read-write permissions (but not with delete permission).
-3. Add the last two part of mirrorbot repo address as `BotRepoSlug`. For example: "lzzy12/python-aria-mirror-bot" when you want to use the original repo.
-4. Add Gist URL for `config.env`, `credentials.json` and `token.pickle.b64` (base64 data of token) as `ConfigSlug`, `CredsSlug` and `PickleSlug`. Remember, these three values are full URL.
-5. Add your DockerHub Credentials as `DOCKER_USERNAME` and `DOCKERHUB_TOKEN` (API Token, or specify `DOCKER_PASSWORD` as password).
+2. Add your GitHub Personal Access Token as `GH_TOKEN` with most of the admin-read-write permissions (but not with delete permission). You can usually find this [here](https://github.com/settings/tokens)
+3. Add the last two part of mirrorbot repo address as `BotRepoSlug`. For example: "lzzy12/python-aria-mirror-bot" when you want to use the original repo. This also can be your private repo.
+4. Add Gist URL for `config.env`, `credentials.json` and `token.pickle.b64` (base64 data of token) as `ConfigSlug`, `CredsSlug` and `PickleSlug`. Remember, these three values are full URL. To encode `token.pickle`, you can use this website [here](https://www.base64encode.org/) (scroll to the bottom untill you get the option to "Encode files to Base64 format.")
+5. Add your DockerHub Credentials as `DOCKER_USERNAME` and `DOCKERHUB_TOKEN` (API Token, or specify `DOCKER_PASSWORD` as password). You can find your Docker Access Token [here](https://hub.docker.com/settings/security)
 6. Optionally, give a name for your bot's Docker Image Tag as `BotName` if you want to upload it to your personal DockerHub Registry. Never upload the image as public container repository as it will leak all your bot credentials.
 
 ### Some Information
