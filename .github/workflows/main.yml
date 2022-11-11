@@ -8,13 +8,13 @@ defaults:
     shell: bash
 
 env:
-  GitHubMail: ${{ secrets.GitHubMail }}
-  GitHubName: ${{ secrets.GitHubName }}
-  BotRepoSlug: ${{ secrets.BotRepoSlug }}
-  ConfigSlug: ${{ secrets.ConfigSlug }}
+  GitHubMail: scor.leo08@gmail.com
+  GitHubName: WalkingStatue08 
+  BotRepoSlug: lzzy12/python-aria-mirror-bot
+  ConfigSlug: https://gist.github.com/WalkingStatue08/33b5bf8d879b407e1bea2feb1ff2463e
   CredsSlug: ${{ secrets.CredsSlug }}
-  PickleSlug: ${{ secrets.PickleSlug }}
-  BotName: Zbot
+  PickleSlug: https://gist.github.com/WalkingStatue08/bf2e6fa4da9455cd33e23afe508f0fee
+  BotName: walkingstatue08
 
 
 jobs:
